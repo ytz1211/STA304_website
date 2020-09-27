@@ -1,78 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.75.1" />
+---
+title: "A Student Perspective on Aid Policies Within the 2019 Canadian Election"
+author: "Yitian Zhao"
+date: 2020-09-27
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
 
-
-<title>Hello R Markdown - A Hugo website</title>
-<meta property="og:title" content="Hello R Markdown - A Hugo website">
-
-
-  <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
-
-
-
-  
-
-
-
-
-
-
-
-
-<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
-
-
-
-<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
-<link rel="stylesheet" href="../../../../css/main.css" media="all">
-
-
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
-  <a href="../../../../" class="nav-logo">
-    <img src="../../../../images/logo.png"
-         width="50"
-         height="50"
-         alt="Logo">
-  </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="../../../../about/">About</a></li>
-    
-    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
-    
-    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
-    
-  </ul>
-</nav>
-
-      </header>
-
-
-<main class="content" role="main">
-
-  <article class="article">
-    
-    <span class="article-duration">7 min read</span>
-    
-
-    <h1 class="article-title">Hello R Markdown</h1>
-
-    
-    <span class="article-date">2015-07-23</span>
-    
-
-    <div class="article-content">
-      
 
 
 <div id="abstract" class="section level1">
@@ -85,15 +18,15 @@
 <p>The data set decon was used to retrieve data about student voters, especially political view point and financial situation. It contains the personal information of people in a wide range of demographics. In this case, we want to analyze the financial situation of students who don’t work versus students who do and how it may affect their political viewpoints. Typically, we would assume that students who work are likely to have less financial support from their family (thus the need to work) and will have political perspective that supports additional social assistance for students. Through our findings, we see that this is somewhat the case compared to students who do not work as a larger proportion of working students have left leaning political views and generally feel worse off financially.</p>
 <p>This study will analyze the responses among working and non-working students for their opinions on their own financial standing, their political opinions, and their household income to ideally provide an insight into how their financial backing may affect their political opinion. After going through this data, we see that the evidence exists but it is hard to define a clear relationship among the variables due to their qualitative nature and the sampling representation of both groups of working and non-working students differ greatly which impact our conclusions. Future steps to take here include interpreting and analyzing the data from students from previous years as well as grouping students together as a whole to compare with another demographic.</p>
 <p>We are using the packages tidyverse, blogdown, cesR, devtools which are all referenced below.</p>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<p><img src="/post/YZ_STA304_cesR_Article_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="/post/YZ_STA304_cesR_Article_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
 <p>The variables we focus on are how working and non-working students rank themselves on the political spectrum. We see that working students are typically more left-aligned likely due to their support for social aid. On the other hand, many non-working students rank themselves more towards the center which should make sense as we have a much larger sample of non-working students and the broad nature of this demographic includes people of various backgrounds and opinions.</p>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/YZ_STA304_cesR_Article_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre><code>## 
 ##                           Better                            Worse 
 ##                              166                              414 
 ##         Not made much difference Don&#39;t know/ Prefer not to answer 
 ##                              616                              118</code></pre>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<p><img src="/post/YZ_STA304_cesR_Article_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
 <pre><code>## 
 ##                           Better                            Worse 
 ##                               18                               63 
@@ -101,7 +34,7 @@
 ##                               82                               14</code></pre>
 <p>In Figures 3 and 4, we can compare the proportion of working students and non-working students about their opinions on their personal financial standings in 2019. We see that there is a higher proportion of working students who feel that their financial standing is worse off compared to non-working students which is what we predicted in the first place. In the table of results, we see that the proportion of non-working students who feel worse off in their financial situation is 414/1314 = 0.315 whereas the proportion of working students who feel worse off is 63/177 = 0.356.</p>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/YZ_STA304_cesR_Article_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre><code>##                                      employment      income       
 ##  Student                                  :553   Min.   :      0  
 ##  Working for pay full-time                :  0   1st Qu.:  20000  
@@ -111,7 +44,7 @@
 ##  Unemployed/ looking for work             :  0   Max.   :1000000  
 ##  (Other)                                  :  0</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<p><img src="/post/YZ_STA304_cesR_Article_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
 <pre><code>##                                      employment     income      
 ##  Student and working for pay              :81   Min.   :     0  
 ##  Working for pay full-time                : 0   1st Qu.: 22000  
@@ -130,6 +63,11 @@
 <p>One weakness that was prevalent in this study was the sample representation of working and non-working students as we have a lot more responses from non-working students. This leads to a potential under representation of the responses from working students which may impact the evidence we find and our ultimate conclusions in the end. Another weakness was the lack of study of direct relationships between variables due to most variables being qualitative in nature. Ideally, we would’ve wanted to analyze 2 variables (in this case financial standing and political opinion) using a scatter plot and perhaps applying a linear regression model to study the strength in correlation to help explain our findings. A potential next step should be to include data and findings from the Canadian Election Study from previous years to compare the financial standings and political opinions of students in the past compared to those of 2019. There is more work to be done to interpret the CES web and phone data to find the student demographics and their opinions and attitudes.</p>
 </div>
 </div>
+<div id="host" class="section level1">
+<h1>Host</h1>
+<p>R markdown file for this post can be found at <a href="https://github.com/ytz1211/STA304_website" class="uri">https://github.com/ytz1211/STA304_website</a></p>
+<p>Specifically <a href="https://github.com/ytz1211/STA304_website/tree/master/content/post" class="uri">https://github.com/ytz1211/STA304_website/tree/master/content/post</a></p>
+</div>
 <div id="references" class="section level1">
 <h1>References</h1>
 <ul>
@@ -145,44 +83,3 @@ Creating Websites with R Markdown. Chapman and Hall/CRC. ISBN
 978-0815363729</li>
 </ul>
 </div>
-
-    </div>
-  </article>
-
-  
-
-
-</main>
-
-      <footer class="footer">
-        <ul class="footer-links">
-          <li>
-            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          <li>
-            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
-          </li>
-        </ul>
-      </footer>
-
-    </div>
-    
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-
-
-
-    
-
-    
-  </body>
-</html>
-
